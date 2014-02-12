@@ -27,9 +27,9 @@ require 'capistrano/ec2_tagged'
 Then call `ec2_tagged` method in each stage files like config/deploy/production.rb as:
 
 ```ruby
-role :web, ec2_tagged("Name" => "my-web-server")
-role :app, ec2_tagged("Name" => "my-app-server")
-role :db, ec2_tagged("Name" => "my-db-server"), :primary => true
+role :web, *ec2_tagged("Name" => "my-web-server")
+role :app, *ec2_tagged("Name" => "my-app-server")
+role :db,  *ec2_tagged("Name" => "my-db-server"), :primary => true
 ```
 
 
