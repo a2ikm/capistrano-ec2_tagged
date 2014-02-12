@@ -2,6 +2,11 @@
 
 Get ip addresses of AWS EC2 instances filtered by their tags.
 
+## Requirements
+
+* aws-sdk
+* capistrano ~> 3.0
+
 ## Installation
 
 Add this line to your application's Gemfile:
