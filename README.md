@@ -1,6 +1,6 @@
 # Capistrano::Ec2Tagged
 
-TODO: Write a gem description
+Get ip addresses of AWS EC2 instances filtered by their tags.
 
 ## Installation
 
@@ -18,7 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add this line to your application's Capfile:
+
+```ruby
+require 'capistrano/ec2_tagged'
+```
+
+Then call `ec2_tagged` method in each stage files like config/deploy/production.rb as:
+
+```ruby
+role :web, ec2_tagged("Name" => "my-web-server")
+role :app, ec2_tagged("Name" => "my-app-server")
+role :db, ec2_tagged("Name" => "my-db-server"), :primary => true
+```
+
 
 ## Contributing
 

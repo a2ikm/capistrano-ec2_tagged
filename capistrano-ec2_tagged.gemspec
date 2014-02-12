@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Capistrano::Ec2Tagged::VERSION
   spec.authors       = ["Masato Ikeda"]
   spec.email         = ["masato.ikeda@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Get ip addresses of AWS EC2 instances filtered by their tags.}
+  spec.description   = %q{Get ip addresses of AWS EC2 instances filtered by their tags.}
+  spec.homepage      = "https://github.com/a2ikm/capistrano-ec2_tagged"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "aws-sdk"
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end
