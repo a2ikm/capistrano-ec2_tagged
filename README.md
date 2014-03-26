@@ -33,9 +33,9 @@ And set credentials with AmazonEC2ReadOnlyAccess permission in config/deploy.rb 
 
 
 ```ruby
-set :access_key_id, "YOUR ACCESS KEY ID"
-set :secret_access_key, "YOUR SECRET ACCESS KEY"
-set :region, "ap-northeast-1"
+set :aws_access_key_id, "YOUR ACCESS KEY ID"
+set :aws_secret_access_key, "YOUR SECRET ACCESS KEY"
+set :aws_region, "ap-northeast-1"
 ```
 
 Then call `ec2_tagged` method in each stage files like config/deploy/production.rb as:
