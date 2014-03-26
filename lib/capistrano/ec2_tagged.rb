@@ -5,9 +5,9 @@ module Capistrano
   module Ec2Tagged
     def ec2_tagged(keys_and_values = {})
       @ec2 ||= AWS::EC2.new(
-        :access_key_id      => fetch(:access_key_id),
-        :secret_access_key  => fetch(:secret_access_key),
-        :region             => fetch(:region)
+        :access_key_id      => fetch(:aws_access_key_id),
+        :secret_access_key  => fetch(:aws_secret_access_key),
+        :region             => fetch(:aws_region)
       )
 
       instances = @ec2.instances
