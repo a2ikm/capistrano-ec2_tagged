@@ -1,6 +1,6 @@
 # Capistrano::Ec2Tagged
 
-Get ip addresses of AWS EC2 instances filtered by their tags.
+Get IP addresses of AWS EC2 instances filtered by their tags.
 
 ## Requirements
 
@@ -43,13 +43,13 @@ Then call `ec2_tagged` method in each stage files like config/deploy/production.
 ```ruby
 role :web, ec2_tagged("Name" => "my-web-server")
 role :app, ec2_tagged("Name" => "my-app-server")
-role :db,  ec2_tagged("Name" => "my-db-server"), :primary => true
+role :db,  ec2_tagged("Name" => "my-db-server")
 ```
 
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/capistrano-ec2_tagged/fork )
+1. Fork it ( http://github.com/a2ikm/capistrano-ec2_tagged/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
