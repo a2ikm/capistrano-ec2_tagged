@@ -17,9 +17,11 @@ module Capistrano
         instances = instances.tagged_values(value.to_s) if value != true
       end
 
-      instances.map { |instance|
-        instance.ip_address || instance.private_ip_address if instance.status == :running
-      }.compact
+      AWS.memoize do
+        instances.map { |instance|
+          instance.ip_address || instance.private_ip_address if instance.status == :running
+        }.compact
+      end
     end
   end
 end
