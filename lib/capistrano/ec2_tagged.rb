@@ -1,5 +1,5 @@
 require "capistrano/ec2_tagged/version"
-require "aws-sdk"
+require "aws-sdk-v1"
 
 module Capistrano
   module Ec2Tagged
