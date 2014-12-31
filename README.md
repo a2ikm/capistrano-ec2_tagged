@@ -4,14 +4,16 @@ Get IP addresses of AWS EC2 instances filtered by their tags.
 
 ## Requirements
 
-* aws-sdk
+* aws-sdk-v1
 * capistrano ~> 3.0
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'capistrano-ec2_tagged'
+```ruby
+gem 'capistrano-ec2_tagged'
+```
 
 And then execute:
 
